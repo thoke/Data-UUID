@@ -80,7 +80,7 @@ WriteMakefile(
     }
     $d = $opt{s} || $d;
     print "\tUUID state storage: $d\n";
-    $d =~ s/\\/\\\\/g if $^O eq 'MSWin32';
+    $d =~ s/\\/\//g if $^O eq 'MSWin32';
 
     my $m = '0007';
     unless ($^O eq 'MSWin32') {
